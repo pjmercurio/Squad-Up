@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		57592F631CDBEA3C0057A855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57592F621CDBEA3C0057A855 /* AppDelegate.swift */; };
-		57592F651CDBEA3C0057A855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57592F641CDBEA3C0057A855 /* ViewController.swift */; };
 		57592F681CDBEA3C0057A855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57592F661CDBEA3C0057A855 /* Main.storyboard */; };
 		57592F6B1CDBEA3C0057A855 /* Squad_Up.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57592F691CDBEA3C0057A855 /* Squad_Up.xcdatamodeld */; };
 		57592F6D1CDBEA3C0057A855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57592F6C1CDBEA3C0057A855 /* Assets.xcassets */; };
 		57592F701CDBEA3C0057A855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57592F6E1CDBEA3C0057A855 /* LaunchScreen.storyboard */; };
 		57592F7B1CDBEA3C0057A855 /* Squad_UpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57592F7A1CDBEA3C0057A855 /* Squad_UpTests.swift */; };
 		57592F861CDBEA3C0057A855 /* Squad_UpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57592F851CDBEA3C0057A855 /* Squad_UpUITests.swift */; };
+		575DB4141CDD1321007B9CC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DB4131CDD1321007B9CC9 /* LoginViewController.swift */; };
+		575DB4161CDD13E6007B9CC9 /* grey_gradient_wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 575DB4151CDD13E6007B9CC9 /* grey_gradient_wallpaper.jpg */; };
+		575DB41C1CDD1EC1007B9CC9 /* gender_neutral_user_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 575DB4181CDD1EC1007B9CC9 /* gender_neutral_user_filled.png */; };
+		575DB41D1CDD1EC1007B9CC9 /* home_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 575DB4191CDD1EC1007B9CC9 /* home_filled.png */; };
+		575DB41E1CDD1EC1007B9CC9 /* settings_3_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 575DB41A1CDD1EC1007B9CC9 /* settings_3_filled.png */; };
+		575DB41F1CDD1EC1007B9CC9 /* star_of_bethlehem_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 575DB41B1CDD1EC1007B9CC9 /* star_of_bethlehem_filled.png */; };
+		575DB4211CDD298D007B9CC9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DB4201CDD298D007B9CC9 /* SignUpViewController.swift */; };
+		575DB4231CDD4642007B9CC9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DB4221CDD4642007B9CC9 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,6 @@
 /* Begin PBXFileReference section */
 		57592F5F1CDBEA3C0057A855 /* Squad Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squad Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57592F621CDBEA3C0057A855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57592F641CDBEA3C0057A855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		57592F671CDBEA3C0057A855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57592F6A1CDBEA3C0057A855 /* Squad_Up.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Squad_Up.xcdatamodel; sourceTree = "<group>"; };
 		57592F6C1CDBEA3C0057A855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +55,14 @@
 		57592F811CDBEA3C0057A855 /* Squad UpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Squad UpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57592F851CDBEA3C0057A855 /* Squad_UpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad_UpUITests.swift; sourceTree = "<group>"; };
 		57592F871CDBEA3C0057A855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		575DB4131CDD1321007B9CC9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		575DB4151CDD13E6007B9CC9 /* grey_gradient_wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grey_gradient_wallpaper.jpg; sourceTree = "<group>"; };
+		575DB4181CDD1EC1007B9CC9 /* gender_neutral_user_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_neutral_user_filled.png; sourceTree = "<group>"; };
+		575DB4191CDD1EC1007B9CC9 /* home_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_filled.png; sourceTree = "<group>"; };
+		575DB41A1CDD1EC1007B9CC9 /* settings_3_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_3_filled.png; sourceTree = "<group>"; };
+		575DB41B1CDD1EC1007B9CC9 /* star_of_bethlehem_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_of_bethlehem_filled.png; sourceTree = "<group>"; };
+		575DB4201CDD298D007B9CC9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		575DB4221CDD4642007B9CC9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +114,15 @@
 			isa = PBXGroup;
 			children = (
 				57592F621CDBEA3C0057A855 /* AppDelegate.swift */,
-				57592F641CDBEA3C0057A855 /* ViewController.swift */,
+				575DB4131CDD1321007B9CC9 /* LoginViewController.swift */,
+				575DB4201CDD298D007B9CC9 /* SignUpViewController.swift */,
 				57592F661CDBEA3C0057A855 /* Main.storyboard */,
+				575DB4221CDD4642007B9CC9 /* MainViewController.swift */,
 				57592F6C1CDBEA3C0057A855 /* Assets.xcassets */,
 				57592F6E1CDBEA3C0057A855 /* LaunchScreen.storyboard */,
 				57592F711CDBEA3C0057A855 /* Info.plist */,
 				57592F691CDBEA3C0057A855 /* Squad_Up.xcdatamodeld */,
+				575DB4171CDD13EA007B9CC9 /* Images */,
 			);
 			path = "Squad Up";
 			sourceTree = "<group>";
@@ -126,6 +143,18 @@
 				57592F871CDBEA3C0057A855 /* Info.plist */,
 			);
 			path = "Squad UpUITests";
+			sourceTree = "<group>";
+		};
+		575DB4171CDD13EA007B9CC9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				575DB4181CDD1EC1007B9CC9 /* gender_neutral_user_filled.png */,
+				575DB4191CDD1EC1007B9CC9 /* home_filled.png */,
+				575DB41A1CDD1EC1007B9CC9 /* settings_3_filled.png */,
+				575DB41B1CDD1EC1007B9CC9 /* star_of_bethlehem_filled.png */,
+				575DB4151CDD13E6007B9CC9 /* grey_gradient_wallpaper.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +261,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575DB41D1CDD1EC1007B9CC9 /* home_filled.png in Resources */,
+				575DB41F1CDD1EC1007B9CC9 /* star_of_bethlehem_filled.png in Resources */,
 				57592F701CDBEA3C0057A855 /* LaunchScreen.storyboard in Resources */,
+				575DB4161CDD13E6007B9CC9 /* grey_gradient_wallpaper.jpg in Resources */,
+				575DB41E1CDD1EC1007B9CC9 /* settings_3_filled.png in Resources */,
 				57592F6D1CDBEA3C0057A855 /* Assets.xcassets in Resources */,
+				575DB41C1CDD1EC1007B9CC9 /* gender_neutral_user_filled.png in Resources */,
 				57592F681CDBEA3C0057A855 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57592F651CDBEA3C0057A855 /* ViewController.swift in Sources */,
+				575DB4141CDD1321007B9CC9 /* LoginViewController.swift in Sources */,
 				57592F631CDBEA3C0057A855 /* AppDelegate.swift in Sources */,
 				57592F6B1CDBEA3C0057A855 /* Squad_Up.xcdatamodeld in Sources */,
+				575DB4211CDD298D007B9CC9 /* SignUpViewController.swift in Sources */,
+				575DB4231CDD4642007B9CC9 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +522,7 @@
 				57592F8C1CDBEA3C0057A855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57592F8D1CDBEA3C0057A855 /* Build configuration list for PBXNativeTarget "Squad UpTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +531,7 @@
 				57592F8F1CDBEA3C0057A855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57592F901CDBEA3C0057A855 /* Build configuration list for PBXNativeTarget "Squad UpUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +540,7 @@
 				57592F921CDBEA3C0057A855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
