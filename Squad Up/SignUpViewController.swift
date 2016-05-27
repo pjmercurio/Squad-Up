@@ -53,19 +53,55 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         createAccount(nameTF.text!, email: emailTF.text!, password: passwordTF.text!, age: Int(ageSlider.value));
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getLocation();
+        
+        print("GET LOCATUON: \(getLocation())");
 
         // Do any additional setup after loading the view.
     }
     
+    func getLocation() {
+        let url:NSURL = NSURL(string: "https://freegeoip.net/json/")!;
+        var city:String = "Santa Barbara";
+        var state:String = "CA";
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
+            if let urlContent = data {
+                
+                do {
+                    let jsonResult = try NSJSONSerialization.JSONObjectWithData(urlContent, options: NSJSONReadingOptions.MutableContainers);
+                    city = jsonResult["city"] as! String;
+                    state = jsonResult["region_code"] as! String;
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.locationLabel.text = "\(city), \(state)";
+                    })
+                }
+                catch {
+                    print("JSON FAIL");
+                }
+                
+            }
+        }
+        task.resume();
+    }
+    
+    
     func createAccount(name: String, email: String, password: String, age: Int) -> Void {
         print("Creating account for \(name)...\nEmail: \(email)\nPassword: \(password)");
+        NSUserDefaults.standardUserDefaults().setObject(email, forKey: "username");
+        NSUserDefaults.standardUserDefaults().setObject(password, forKey: "password");
+        performSegueWithIdentifier("WelcomeSegue", sender: self);
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
