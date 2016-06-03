@@ -10,12 +10,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate;
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent;
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundImage.image = delegate.backgroundImage;
 
         // Do any additional setup after loading the view.
     }

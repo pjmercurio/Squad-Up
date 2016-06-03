@@ -21,21 +21,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grey_gradient_wallpaper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WeM-dU-VSG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squad Up!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFc-iB-M3W">
-                                <rect key="frame" x="189.5" y="176" width="221" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="le_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="wId-t0-mBA">
+                                <rect key="frame" x="165" y="170" width="270" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="3iZ-Oc-h2r"/>
+                                    <constraint firstAttribute="width" constant="270" id="NNe-rx-TXf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wId-t0-mBA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="B8L-xc-dmB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WeM-dU-VSG" secondAttribute="trailing" constant="-20" id="YFE-fi-7nW"/>
                             <constraint firstItem="WeM-dU-VSG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="Zle-Mo-49y"/>
-                            <constraint firstItem="mFc-iB-M3W" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aKo-2z-cuK"/>
                             <constraint firstItem="WeM-dU-VSG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="f2F-8v-bCF"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="WeM-dU-VSG" secondAttribute="bottom" id="iXh-we-cpm"/>
-                            <constraint firstItem="mFc-iB-M3W" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="156" id="yq6-hr-MM3"/>
+                            <constraint firstItem="wId-t0-mBA" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="150" id="nwI-e8-ehd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -46,5 +47,6 @@
     </scenes>
     <resources>
         <image name="grey_gradient_wallpaper.jpg" width="1802" height="1080"/>
+        <image name="le_title.png" width="1491" height="601"/>
     </resources>
 </document>

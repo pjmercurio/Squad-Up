@@ -1,11 +1,16 @@
 <?php
-$dbhost = '107.180.13.125';
-$dbuser = 'paulmercurio';
-$dbpass = 'paulface3';
-$dbname = 'Squadup';
+
+DEFINE ('DB_HOST', '107.180.13.125');
+DEFINE ('DB_PASS', 'paulface3');
+DEFINE ('DB_USER', 'paulmercurio');
+DEFINE ('DB_NAME', 'Squadup');
 
 
-$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+$conn = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) OR DIE("ERROR");
+
+
+
+/*$conn = mysql_connect(DB_HOST, DB_USER, DB_PASS);
 mysql_select_db($dbname, $conn);
 
 function query($q) {
@@ -15,5 +20,5 @@ function query($q) {
     die("Invalid query -- $q -- " . mysql_error());
   }
   return $result;
-}
+}*/
 ?>

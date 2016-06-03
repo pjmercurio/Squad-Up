@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var backgroundImage: UIImage = UIImage.init(named: "morning_mode.png")!;
     let hour = NSCalendar.currentCalendar().component(.Hour, fromDate: NSDate())
 
 

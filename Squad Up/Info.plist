@@ -24,11 +24,27 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>New Squad</string>
+			<string>My Squad</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.test.static1</string>
+			<string>com.pjmercurio.Squad-Up.First</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>Create a new squad</string>
+			<string>Check in on the Squad</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Prospective Squads</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.pjmercurio.Squad-Up.Second</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Matches for the Day</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>My Profile</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.pjmercurio.Squad-Up.Third</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>View/Edit Your Profile</string>
 		</dict>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
