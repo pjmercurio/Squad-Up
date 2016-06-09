@@ -12,7 +12,14 @@ class ProfileViewController: UIViewController {
     
     let delegate = UIApplication.sharedApplication().delegate as! AppDelegate;
     
+    @IBAction func logout(sender: AnyObject) {
+        delegate.logout(0);
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController");
+        presentViewController(vc!, animated: true, completion: nil);
+    }
+    
     @IBOutlet weak var backgroundImage: UIImageView!
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent;
     }

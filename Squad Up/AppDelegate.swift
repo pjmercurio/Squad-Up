@@ -14,11 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var backgroundImage: UIImage = UIImage.init(named: "morning_mode.png")!;
-    let hour = NSCalendar.currentCalendar().component(.Hour, fromDate: NSDate())
+    let hour = NSCalendar.currentCalendar().component(.Hour, fromDate: NSDate());
+    var userEmail: String = "";
+    var uid: Int = 0;
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        print("Did finish launching with options!!");
         return true
     }
 
@@ -30,14 +33,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        print("App entered background");
+        logout(0);
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        print("App entering foreground..");
+        if (uid != 0) {
+            logout(1);
+        }
+        
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        print("App did become active!");
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -48,6 +60,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func getHour() -> AnyObject {
         return hour;
+    }
+    
+    func logout(online: Int) {
+        let url: NSURL! = NSURL(string: "http://www.squadup.us/PHP/logout.php");
+        let params = "uid=\(uid)&online=\(online)";
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:url);
+        request.HTTPMethod = "POST";
+        request.HTTPBody = params.dataUsingEncoding(NSUTF8StringEncoding);
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
+            if (error != nil) {
+                print("Response Error: \(error)");
+            }
+            else {
+                let datastring = NSString.init(data: data!, encoding: NSUTF8StringEncoding);
+                print("Datastring: \(datastring)");
+                print("Logged \(online) successfully!");
+            }
+        }
+        
+        task.resume();
     }
 
     // MARK: - Core Data stack

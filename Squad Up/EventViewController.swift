@@ -71,32 +71,37 @@ class EventViewController: UIViewController {
     
     // LOAD MEMBERS OF YOUR SQUAD TO DISPLAY AT BOTTOM OF SCREEN
     func loadSquadBar() {
-        let Friends = [["Dylan","dylan_prof.jpg"],["Taylor","taylor_prof.jpg"],["Tao","tao_prof.jpg"],["Chris","chris_prof.jpg"]];
+        let Friends = [["Dylan","dylan_prof.jpg",false],["Taylor","taylor_prof.jpg",true],["Tao","tao_prof.jpg",false],["Chris","chris_prof.jpg",true]];
         var squadWidth:CGFloat = 20;
         
         for friend in Friends {
             let profPic: UIView = UIView.init(frame: CGRectMake(squadWidth, 13, 88, 84));
             let subView: UIView = UIView.init(frame: CGRectMake(2, 2, 84, 80));
             let profImage: UIImageView = UIImageView.init(frame: CGRectMake(0, 0, 84, 80));
+            let onlineDotImage: UIImageView = UIImageView.init(frame: CGRectMake(69, 5, 10, 10));
             let labelView: UIView = UIView.init(frame: CGRectMake(0, 60, 84, 20));
             let label: UILabel = UILabel.init(frame: CGRectMake(0, 0, 84, 20));
             let font = UIFont.init(name: "HelveticaNeue-Light", size: 14.0);
             
             profPic.backgroundColor = UIColor.whiteColor();
             subView.backgroundColor = UIColor.whiteColor();
-            profImage.image = UIImage.init(named: friend[1]);
+            profImage.image = UIImage.init(named: friend[1] as! String);
+            onlineDotImage.image = UIImage.init(named: "online_dot.png");
             profPic.layer.cornerRadius = 10.0;
             subView.layer.cornerRadius = 10.0;
             subView.layer.masksToBounds = true;
             labelView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5);
             
-            label.text = friend[0];
+            label.text = friend[0] as? String;
             label.textColor = UIColor.whiteColor();
             label.textAlignment = .Center;
             label.font = font;
             
+            onlineDotImage.hidden = !(friend[2] as! Bool);
+            
             labelView.addSubview(label);
             subView.addSubview(profImage);
+            subView.addSubview(onlineDotImage);
             subView.addSubview(labelView);
             profPic.addSubview(subView);
             squadScroll.addSubview(profPic);

@@ -43,6 +43,7 @@
 		5793A21F1CEE4D4000258201 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793A21E1CEE4D4000258201 /* ProfileViewController.swift */; };
 		5793A2211CEE4D8300258201 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793A2201CEE4D8300258201 /* EventViewController.swift */; };
 		5793A2231CEE54AE00258201 /* vid_sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 5793A2221CEE51A800258201 /* vid_sample.m4v */; };
+		57AE9C241D094E07003A263C /* online_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AE9C231D094E07003A263C /* online_dot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		5793A21E1CEE4D4000258201 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5793A2201CEE4D8300258201 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		5793A2221CEE51A800258201 /* vid_sample.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = vid_sample.m4v; sourceTree = "<group>"; };
+		57AE9C231D094E07003A263C /* online_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online_dot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		575DB4171CDD13EA007B9CC9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				57AE9C231D094E07003A263C /* online_dot.png */,
 				578A46621CFE605D00846B5C /* add_member.png */,
 				578A465A1CFE5AF700846B5C /* chris_prof.jpg */,
 				578A465B1CFE5AF700846B5C /* taylor_prof.jpg */,
@@ -345,6 +348,7 @@
 				578A465E1CFE5AF700846B5C /* chris_prof.jpg in Resources */,
 				578A46601CFE5AF700846B5C /* dylan_prof.jpg in Resources */,
 				5723FC811CFCD63000F59976 /* le_title1.png in Resources */,
+				57AE9C241D094E07003A263C /* online_dot.png in Resources */,
 				5723FC7C1CFCC60600F59976 /* le_title.png in Resources */,
 				57662CDA1CF63FB300BAE690 /* down_red_arrow.png in Resources */,
 				57662CE11CF6C07400BAE690 /* night_mode.png in Resources */,
