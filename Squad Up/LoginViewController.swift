@@ -30,22 +30,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setBackground(Int(delegate.getHour() as! NSNumber));
         
-        /*
-        if let username = NSUserDefaults.standardUserDefaults().stringForKey("username") {
-            print("Credendials found! Entering returning user mode...");
-            print("Username: \(username)");
-            let password = NSUserDefaults.standardUserDefaults().stringForKey("password");
-            emailTF.text = username;
-            passwordTF.text = password;
-            signInButton.setTitle("Sign In", forState: UIControlState.Normal);
-            signInButton.tag = 1;
-        }
-        else {
-            print("Credentials not found, entering new user mode...");
-            signInButton.setTitle("Sign Up", forState: UIControlState.Normal);
-            signInButton.tag = 0;
-        }*/
-        
     }
     
     // Change background image based on time of day
