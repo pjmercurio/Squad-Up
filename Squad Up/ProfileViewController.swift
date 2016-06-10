@@ -13,7 +13,8 @@ class ProfileViewController: UIViewController {
     let delegate = UIApplication.sharedApplication().delegate as! AppDelegate;
     
     @IBAction func logout(sender: AnyObject) {
-        delegate.logout(0);
+        delegate.logout(0, uid: NSUserDefaults.standardUserDefaults().integerForKey("uid"));
+        NSUserDefaults.resetStandardUserDefaults();
         let vc = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController");
         presentViewController(vc!, animated: true, completion: nil);
     }

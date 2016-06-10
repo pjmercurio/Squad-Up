@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var backgroundImage: UIImage = UIImage.init(named: "morning_mode.png")!;
     let hour = NSCalendar.currentCalendar().component(.Hour, fromDate: NSDate());
-    var userEmail: String = "";
-    var uid: Int = 0;
+    //var uid: Int = 0;
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -34,17 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         print("App entered background");
-        logout(0);
+        logout(0, uid: NSUserDefaults.standardUserDefaults().integerForKey("uid"));
         
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         print("App entering foreground..");
-        if (uid != 0) {
-            logout(1);
+        if (NSUserDefaults.standardUserDefaults().integerForKey("uid") != 0) {
+            logout(1, uid: NSUserDefaults.standardUserDefaults().integerForKey("uid"));
         }
-        
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -62,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return hour;
     }
     
-    func logout(online: Int) {
+    func logout(online: Int, uid: Int) {
         let url: NSURL! = NSURL(string: "http://www.squadup.us/PHP/logout.php");
         let params = "uid=\(uid)&online=\(online)";
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url);

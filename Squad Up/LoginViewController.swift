@@ -88,8 +88,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 case 0:
                                     print("LOGIN SUCCESSFUL!");
                                     if let uid:Int = parseJSON["uid"]!.integerValue {
-                                        self.delegate.uid = uid;
-                                        print("setting delegate uid to: \(uid)");
+                                        NSUserDefaults.standardUserDefaults().setInteger(uid, forKey: "uid");
+                                        //self.delegate.uid = uid;
                                     }
                                     NSOperationQueue.mainQueue().addOperationWithBlock({
                                         self.performSegueWithIdentifier("LoginSegue", sender: self);
